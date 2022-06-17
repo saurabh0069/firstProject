@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.student.management.dto.TeacherDto;
 import com.student.management.entities.StudentEntity;
 import com.student.management.entities.TeacherEntity;
 import com.student.management.service.TeacherService;
@@ -18,7 +19,7 @@ public class TeacherController {
 	TeacherService teacherService;
 	
 	@PostMapping("/create-teacher")
-	public void createTeacher(@RequestBody TeacherEntity teacher) {
+	public void createTeacher(@RequestBody TeacherDto teacher) {
 		teacherService.saveTeacher(teacher);
 	}
 }
