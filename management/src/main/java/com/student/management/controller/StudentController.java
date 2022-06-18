@@ -79,7 +79,7 @@ public class StudentController {
 	
 	@GetMapping("/course-cost") 
 	public String getCourseCost() {
-		String url = "localhost:8085/tutionFees/fees";
+		String url = "http://localhost:8085/tutionFees/fees";
 		HttpHeaders headers = new HttpHeaders();
 	    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 	    HttpEntity <String> entity = new HttpEntity<String>(headers);
